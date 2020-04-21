@@ -10,8 +10,10 @@ docker build -t react-app .
 `--rm` - удаляем контейнер после стопа
 `-p` - 3000 порт занят, меняем на 3001
 
+остальное в приложенной ссылке
+
 ```
-docker run -it --rm -p 3001:3000 react-app
+sudo docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 3001:3000 -e CHOKIDAR_USEPOLLING=true react-app
 ```
 
 Ссылка для чтения:
